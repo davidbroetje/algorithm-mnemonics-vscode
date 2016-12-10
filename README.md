@@ -6,7 +6,7 @@ This extension is a port of [Algorithm Mnemonics: Increase Productivity with STL
 ## Features
 
 [Algorithm Mnemonics: Increase Productivity with STL Algorithms](https://github.com/tommybennett/algorithm-mnemonics) provides code templates for C++ STL algorithms. 
-Each code template is given a name and a 3-letter mnemonic (All available code templates are listed in the word document [STLInstructionSet.docx](https://github.com/tommybennett/algorithm-mnemonics/blob/master/STLInstructionSet.docx)).
+Each code template is given a name and a 3-letter mnemonic (All available code templates are listed in the file [STLInstructionSet.md](https://github.com/tommybennett/algorithm-mnemonics/blob/master/STLInstructionSet.md)).
 
 This extension implements these code templates as VS Code snippets accessible by it's 3-letter mnemonic. 
 
