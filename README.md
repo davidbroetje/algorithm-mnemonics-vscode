@@ -23,6 +23,11 @@ Or use the Trigger Suggest command (Default: Ctrl+Space (Windows, Linux) or Cmd+
 
 
 
+## [Change Log](https://github.com/davidbroetje/algorithm-mnemonics-vscode/blob/master/CHANGELOG.md)
+### Version 1.0.1 (10 December 2016)
+* Changed link to code template list
+* Added change log
+
 -----------------------------------------------------------------------------------------------------------
 
 **Enjoy!**

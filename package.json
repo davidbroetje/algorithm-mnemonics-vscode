@@ -2,7 +2,7 @@
     "name": "algorithm-mnemonics-vscode",
     "displayName": "C++ Algorithm Mnemonics",
     "description": "C++ Algorithm Mnemonics as VSCode snippets.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "davidbroetje",
     "license": "MIT",
     "repository": {
