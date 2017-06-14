@@ -207,7 +207,7 @@
 		"find_end": {
 		"prefix": "fne",
 		"body": [
-			"auto pos = std::find_std::end(std::begin(${container}), std::end(${container}),",
+			"auto pos = std::find_end(std::begin(${container}), std::end(${container}),",
 			"  std::begin($1), std::end($2));",
 			"if (pos != std::end(${container})) {",
 			"  $3",
