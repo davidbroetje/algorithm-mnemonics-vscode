@@ -1,5 +1,9 @@
 # C++ Algorithm Mnemonics for Visual Studio Code
 
+![Version](https://vsmarketplacebadge.apphb.com/version-short/davidbroetje.algorithm-mnemonics-vscode.svg)
+![Installs](https://vsmarketplacebadge.apphb.com/installs-short/davidbroetje.algorithm-mnemonics-vscode.svg)
+![Rating](https://vsmarketplacebadge.apphb.com/rating-short/davidbroetje.algorithm-mnemonics-vscode.svg)
+
 This extension is a port of [Algorithm Mnemonics: Increase Productivity with STL Algorithms](https://github.com/tommybennett/algorithm-mnemonics) by [Tommy Bennett](https://github.com/tommybennett). 
 
 
