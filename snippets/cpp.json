@@ -2,8 +2,8 @@
 		"accumulate": {
 		"prefix": "acl",
 		"body": [
-			"auto sum = std::accumulate(std::begin(${container}), std::end(${container}), 0, [](int total, $1) {",
-			"  $2",
+			"auto sum = std::accumulate(std::begin(${1:container}), std::end(${1:container}), 0, [](int total, $2) {",
+			"  $3",
 			"});"
 		],
 		"description": "Code snippet for 'accumulate'"
@@ -12,7 +12,7 @@
 		"accumulate2": {
 		"prefix": "acm",
 		"body": [
-			"auto sum = std::accumulate(std::begin(${container}), std::end(${container}), 0);"
+			"auto sum = std::accumulate(std::begin(${1:container}), std::end(${1:container}), 0);"
 		],
 		"description": "Code snippet for 'accumulate'"
 		},
@@ -20,9 +20,9 @@
 		"adjacent_find": {
 		"prefix": "ajf",
 		"body": [
-			"auto pos = std::adjacent_find(std::begin(${container}), std::end(${container}));",
-			"if (pos != std::end(${container})) {",
-			"  $1",
+			"auto pos = std::adjacent_find(std::begin(${1:container}), std::end(${1:container}));",
+			"if (pos != std::end(${1:container})) {",
+			"  $2",
 			"}"
 		],
 		"description": "Code snippet for 'adjacent_find'"
@@ -31,10 +31,10 @@
 		"all_of": {
 		"prefix": "alo",
 		"body": [
-			"if (std::all_of(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
-			"})) {",
+			"if (std::all_of(std::begin(${1:container}), std::end(${1:container}), []($2) {",
 			"  $3",
+			"})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'all_of'"
@@ -43,10 +43,10 @@
 		"any_of": {
 		"prefix": "ano",
 		"body": [
-			"if (std::any_of(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
-			"})) {",
+			"if (std::any_of(std::begin(${1:container}), std::end(${1:container}), []($2) {",
 			"  $3",
+			"})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'any_of'"
@@ -55,9 +55,9 @@
 		"binary_search": {
 		"prefix": "bns",
 		"body": [
-			"auto pos = std::binary_search(std::begin(${container}), std::end(${container}), $1);",
-			"if (pos != std::end(${container})) {",
-			"  $2",
+			"auto pos = std::binary_search(std::begin(${1:container}), std::end(${1:container}), $2);",
+			"if (pos != std::end(${1:container})) {",
+			"  $3",
 			"}"
 		],
 		"description": "Code snippet for 'binary_search'"
@@ -74,7 +74,7 @@
 		"copy": {
 		"prefix": "cpy",
 		"body": [
-			"std::copy(std::begin(${container}), std::end(${container}), std::begin($1));"
+			"std::copy(std::begin(${1:container}), std::end(${1:container}), std::begin($2));"
 		],
 		"description": "Code snippet for 'copy'"
 		},
@@ -82,8 +82,8 @@
 		"copy2": {
 		"prefix": "oit",
 		"body": [
-			"std::copy(std::begin(${container}), std::end(${container}), std::ostream_iterator<$1>{",
-			"  std::cout, \"$2\"",
+			"std::copy(std::begin(${1:container}), std::end(${1:container}), std::ostream_iterator<$2>{",
+			"  std::cout, \"$3\"",
 			"});"
 		],
 		"description": "Code snippet for 'copy'"
@@ -92,7 +92,7 @@
 		"copy_backward": {
 		"prefix": "cpb",
 		"body": [
-			"std::copy_backward(std::begin(${container}), std::end(${container}), std::end(${container}));"
+			"std::copy_backward(std::begin(${1:container}), std::end(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'copy_backward'"
 		},
@@ -100,9 +100,9 @@
 		"copy_if": {
 		"prefix": "cpi",
 		"body": [
-			"std::copy_if(std::begin(${container}), std::end(${container}), std::begin($1),",
-			"[]($2) {",
-			"  $3",
+			"std::copy_if(std::begin(${1:container}), std::end(${1:container}), std::begin($2),",
+			"[]($3) {",
+			"  $4",
 			"});"
 		],
 		"description": "Code snippet for 'copy_if'"
@@ -111,7 +111,7 @@
 		"copy_n": {
 		"prefix": "cpn",
 		"body": [
-			"std::copy_n(std::begin(${container}), $1, std::end(${container}));"
+			"std::copy_n(std::begin(${1:container}), $2, std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'copy_n'"
 		},
@@ -119,7 +119,7 @@
 		"count": {
 		"prefix": "cnt",
 		"body": [
-			"auto n = std::count(std::begin(${container}), std::end(${container}), $1);"
+			"auto n = std::count(std::begin(${1:container}), std::end(${1:container}), $2);"
 		],
 		"description": "Code snippet for 'count'"
 		},
@@ -127,8 +127,8 @@
 		"count_if": {
 		"prefix": "cni",
 		"body": [
-			"auto n = std::count_if(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
+			"auto n = std::count_if(std::begin(${1:container}), std::end(${1:container}), []($2) {",
+			"  $3",
 			"});"
 		],
 		"description": "Code snippet for 'count_if'"
@@ -145,8 +145,8 @@
 		"equal": {
 		"prefix": "eql",
 		"body": [
-			"if (std::equal(std::begin(${container}), std::end(${container}), std::begin($1))) {",
-			"  $2",
+			"if (std::equal(std::begin(${1:container}), std::end(${1:container}), std::begin($2))) {",
+			"  $3",
 			"}"
 		],
 		"description": "Code snippet for 'equal'"
@@ -155,7 +155,7 @@
 		"equal_range": {
 		"prefix": "eqr",
 		"body": [
-			"auto bounds = std::equal_range(std::begin(${container}), std::end(${container}), $1);"
+			"auto bounds = std::equal_range(std::begin(${1:container}), std::end(${1:container}), $2);"
 		],
 		"description": "Code snippet for 'equal_range'"
 		},
@@ -163,8 +163,8 @@
 		"equal_range2": {
 		"prefix": "erl",
 		"body": [
-			"auto bounds = std::equal_range(std::begin(${container}), std::end(${container}), $1,",
-			"  []($2,$3) { $4 });"
+			"auto bounds = std::equal_range(std::begin(${1:container}), std::end(${1:container}), $2,",
+			"  []($3,$4) { $5 });"
 		],
 		"description": "Code snippet for 'equal_range'"
 		},
@@ -172,7 +172,7 @@
 		"erase": {
 		"prefix": "erm",
 		"body": [
-			"${container}.erase(std::remove(std::begin(${container}), std::end(${container}), $1), std::end(${container}));"
+			"${1:container}.erase(std::remove(std::begin(${1:container}), std::end(${1:container}), $2), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'erase'"
 		},
@@ -180,7 +180,7 @@
 		"fill": {
 		"prefix": "fil",
 		"body": [
-			"std::fill(std::begin(${container}), std::end(${container}), $1);"
+			"std::fill(std::begin(${1:container}), std::end(${1:container}), $2);"
 		],
 		"description": "Code snippet for 'fill'"
 		},
@@ -188,7 +188,7 @@
 		"fill_n": {
 		"prefix": "fln",
 		"body": [
-			"std::fill_n(std::begin(${container}), $1, $2);"
+			"std::fill_n(std::begin(${1:container}), $2, $3);"
 		],
 		"description": "Code snippet for 'fill_n'"
 		},
@@ -196,9 +196,9 @@
 		"find": {
 		"prefix": "fnd",
 		"body": [
-			"auto pos = std::find(std::begin(${container}), std::end(${container}), $1);",
-			"if (pos != std::end(${container})) {",
-			"  $2",
+			"auto pos = std::find(std::begin(${1:container}), std::end(${1:container}), $2);",
+			"if (pos != std::end(${1:container})) {",
+			"  $3",
 			"}"
 		],
 		"description": "Code snippet for 'find'"
@@ -207,10 +207,10 @@
 		"find_end": {
 		"prefix": "fne",
 		"body": [
-			"auto pos = std::find_end(std::begin(${container}), std::end(${container}),",
-			"  std::begin($1), std::end($2));",
-			"if (pos != std::end(${container})) {",
-			"  $3",
+			"auto pos = std::find_end(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin($2), std::end($3));",
+			"if (pos != std::end(${1:container})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'find_end'"
@@ -219,10 +219,10 @@
 		"find_first_of": {
 		"prefix": "ffo",
 		"body": [
-			"auto pos = std::find_first_of(std::begin(${container}), std::end(${container}),",
-			"  std::begin($1), std::end($2));",
-			"if (pos != std::end(${container})) {",
-			"  $3",
+			"auto pos = std::find_first_of(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin($2), std::end($3));",
+			"if (pos != std::end(${1:container})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'find_first_of'"
@@ -231,11 +231,11 @@
 		"find_if": {
 		"prefix": "fni",
 		"body": [
-			"auto pos = std::find_if(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
-			"});",
-			"if (pos != std::end(${container})) {",
+			"auto pos = std::find_if(std::begin(${1:container}), std::end(${1:container}), []($2) {",
 			"  $3",
+			"});",
+			"if (pos != std::end(${1:container})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'find_if'"
@@ -244,11 +244,11 @@
 		"find_if_not": {
 		"prefix": "fin",
 		"body": [
-			"auto pos = std::find_if_not(std::begin(${container}), std::end(${container}),[]($1) {",
-			"  $2",
-			"});",
-			"if (pos != std::end(${container})) {",
+			"auto pos = std::find_if_not(std::begin(${1:container}), std::end(${1:container}),[]($2) {",
 			"  $3",
+			"});",
+			"if (pos != std::end(${1:container})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'find_if_not'"
@@ -257,8 +257,8 @@
 		"for_each": {
 		"prefix": "fre",
 		"body": [
-			"std::for_each(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
+			"std::for_each(std::begin(${1:container}), std::end(${1:container}), []($2) {",
+			"  $3",
 			"});"
 		],
 		"description": "Code snippet for 'for_each'"
@@ -267,8 +267,8 @@
 		"generate": {
 		"prefix": "gnr",
 		"body": [
-			"std::generate(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
+			"std::generate(std::begin(${1:container}), std::end(${1:container}), []($2) {",
+			"  $3",
 			"});"
 		],
 		"description": "Code snippet for 'generate'"
@@ -277,8 +277,8 @@
 		"generate_n": {
 		"prefix": "gnn",
 		"body": [
-			"std::generate_n(std::begin(${container}), $1, []($2) {",
-			"  $3",
+			"std::generate_n(std::begin(${1:container}), $2, []($3) {",
+			"  $4",
 			"});"
 		],
 		"description": "Code snippet for 'generate_n'"
@@ -287,9 +287,9 @@
 		"includes": {
 		"prefix": "inc",
 		"body": [
-			"if (std::includes(std::begin(${container}), std::end(${container}),",
-			"  std::begin($1), std::end($2))) {",
-			"    $3",
+			"if (std::includes(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin($2), std::end($3))) {",
+			"    $4",
 			"}"
 		],
 		"description": "Code snippet for 'includes'"
@@ -298,7 +298,7 @@
 		"inplace_merge": {
 		"prefix": "ipm",
 		"body": [
-			"std::inplace_merge(std::begin(${container}), std::end(${container}), std::end(${container}));"
+			"std::inplace_merge(std::begin(${1:container}), std::end(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'inplace_merge'"
 		},
@@ -306,7 +306,7 @@
 		"iota": {
 		"prefix": "ita",
 		"body": [
-			"std::iota(std::begin(${container}), std::end(${container}), $1);"
+			"std::iota(std::begin(${1:container}), std::end(${1:container}), $2);"
 		],
 		"description": "Code snippet for 'iota'"
 		},
@@ -314,8 +314,8 @@
 		"is_heap": {
 		"prefix": "ihp",
 		"body": [
-			"if (std::is_heap(std::begin(${container}), std::end(${container}))) {",
-			"  $1",
+			"if (std::is_heap(std::begin(${1:container}), std::end(${1:container}))) {",
+			"  $2",
 			"}"
 		],
 		"description": "Code snippet for 'is_heap'"
@@ -324,9 +324,9 @@
 		"is_heap_until": {
 		"prefix": "ihu",
 		"body": [
-			"auto pos = std::is_heap_until(std::begin(${container}), std::end(${container}));",
-			"if (pos != std::end(${container})) {",
-			"  $1",
+			"auto pos = std::is_heap_until(std::begin(${1:container}), std::end(${1:container}));",
+			"if (pos != std::end(${1:container})) {",
+			"  $2",
 			"}"
 		],
 		"description": "Code snippet for 'is_heap_until'"
@@ -335,10 +335,10 @@
 		"is_partitioned": {
 		"prefix": "ipt",
 		"body": [
-			"if (std::is_partitioned(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
-			"  })) {",
+			"if (std::is_partitioned(std::begin(${1:container}), std::end(${1:container}), []($2) {",
 			"  $3",
+			"  })) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'is_partitioned'"
@@ -347,8 +347,8 @@
 		"is_permutation": {
 		"prefix": "ipr",
 		"body": [
-			"if (std::is_permutation(std::begin(${container}), std::end(${container}), std::begin($1))) {",
-			"  $2",
+			"if (std::is_permutation(std::begin(${1:container}), std::end(${1:container}), std::begin($2))) {",
+			"  $3",
 			"}"
 		],
 		"description": "Code snippet for 'is_permutation'"
@@ -357,8 +357,8 @@
 		"is_sorted": {
 		"prefix": "iss",
 		"body": [
-			"if (std::is_sorted(std::begin(${container}), std::end(${container}))) {",
-			"  $1",
+			"if (std::is_sorted(std::begin(${1:container}), std::end(${1:container}))) {",
+			"  $2",
 			"}"
 		],
 		"description": "Code snippet for 'is_sorted'"
@@ -367,9 +367,9 @@
 		"is_sorted_until": {
 		"prefix": "isu",
 		"body": [
-			"auto pos = std::is_sorted_until(std::begin(${container}), std::end(${container}));",
-			"if (pos != std::end(${container})) {",
-			"  $1",
+			"auto pos = std::is_sorted_until(std::begin(${1:container}), std::end(${1:container}));",
+			"if (pos != std::end(${1:container})) {",
+			"  $2",
 			"}"
 		],
 		"description": "Code snippet for 'is_sorted_until'"
@@ -378,9 +378,9 @@
 		"lexigraphical_compare": {
 		"prefix": "lxc",
 		"body": [
-			"if (std::lexigraphical_compare(std::begin(${container}), std::end(${container}),",
-			"  std::begin($1), std::end($2)) {",
-			"  $3",
+			"if (std::lexigraphical_compare(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin($2), std::end($3)) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'lexigraphical_compare'"
@@ -389,9 +389,9 @@
 		"lower_bound": {
 		"prefix": "lwb",
 		"body": [
-			"auto pos = std::lower_bound(std::begin(${container}), std::end(${container}), $1);",
-			"if (pos != std::end(${container})) {",
-			"  $2",
+			"auto pos = std::lower_bound(std::begin(${1:container}), std::end(${1:container}), $2);",
+			"if (pos != std::end(${1:container})) {",
+			"  $3",
 			"}"
 		],
 		"description": "Code snippet for 'lower_bound'"
@@ -400,7 +400,7 @@
 		"make_heap": {
 		"prefix": "mkh",
 		"body": [
-			"std::make_heap(std::begin(${container}), std::end(${container}));"
+			"std::make_heap(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'make_heap'"
 		},
@@ -408,7 +408,7 @@
 		"max_element": {
 		"prefix": "mxe",
 		"body": [
-			"auto pos = std::max_element(std::begin(${container}), std::end(${container}));"
+			"auto pos = std::max_element(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'max_element'"
 		},
@@ -416,8 +416,8 @@
 		"merge": {
 		"prefix": "mrg",
 		"body": [
-			"std::merge(std::begin(${container}), std::end(${container}),",
-			"std::begin($1), std::end($2), std::begin($3));"
+			"std::merge(std::begin(${1:container}), std::end(${1:container}),",
+			"std::begin($2), std::end($3), std::begin($4));"
 		],
 		"description": "Code snippet for 'merge'"
 		},
@@ -425,7 +425,7 @@
 		"minmax_element": {
 		"prefix": "mme",
 		"body": [
-			"auto minmax = std::minmax_element(std::begin(${container}), std::end(${container}));"
+			"auto minmax = std::minmax_element(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'minmax_element'"
 		},
@@ -433,7 +433,7 @@
 		"min_element": {
 		"prefix": "mne",
 		"body": [
-			"auto pos = std::min_element(std::begin(${container}), std::end(${container}));"
+			"auto pos = std::min_element(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'min_element'"
 		},
@@ -441,11 +441,11 @@
 		"mismatch": {
 		"prefix": "msm",
 		"body": [
-			"auto values = std::mismatch(std::begin(${container}), std::end(${container}), std::begin(${container}));",
-			"if (values.first == std::end(${container})) {",
-			"  $1",
-			"} else {",
+			"auto values = std::mismatch(std::begin(${1:container}), std::end(${1:container}), std::begin(${1:container}));",
+			"if (values.first == std::end(${1:container})) {",
 			"  $2",
+			"} else {",
+			"  $3",
 			"}"
 		],
 		"description": "Code snippet for 'mismatch'"
@@ -454,7 +454,7 @@
 		"move": {
 		"prefix": "mov",
 		"body": [
-			"std::move(std::begin(${container}), std::end(${container}), std::begin(${container}));"
+			"std::move(std::begin(${1:container}), std::end(${1:container}), std::begin(${1:container}));"
 		],
 		"description": "Code snippet for 'move'"
 		},
@@ -462,7 +462,7 @@
 		"move_backward": {
 		"prefix": "mvb",
 		"body": [
-			"std::move_backward(std::begin(${container}), std::end(${container}), std::end(${container}));"
+			"std::move_backward(std::begin(${1:container}), std::end(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'move_backward'"
 		},
@@ -470,8 +470,8 @@
 		"next_permutation": {
 		"prefix": "nxp",
 		"body": [
-			"if (std::next_permutation(std::begin(${container}), std::end(${container}))) {",
-			"  $1",
+			"if (std::next_permutation(std::begin(${1:container}), std::end(${1:container}))) {",
+			"  $2",
 			"}"
 		],
 		"description": "Code snippet for 'next_permutation'"
@@ -480,10 +480,10 @@
 		"none_of": {
 		"prefix": "nno",
 		"body": [
-			"if (std::none_of(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
-			"})) {",
+			"if (std::none_of(std::begin(${1:container}), std::end(${1:container}), []($2) {",
 			"  $3",
+			"})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'none_of'"
@@ -492,7 +492,7 @@
 		"nth_element": {
 		"prefix": "nth",
 		"body": [
-			"std::nth_element(std::begin(${container}), std::end(${container}), std::end(${container}));"
+			"std::nth_element(std::begin(${1:container}), std::end(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'nth_element'"
 		},
@@ -500,11 +500,11 @@
 		"partition": {
 		"prefix": "ptn",
 		"body": [
-			"auto pos = std::partition(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
-			"});",
-			"if (pos != std::end(${container})) {",
+			"auto pos = std::partition(std::begin(${1:container}), std::end(${1:container}), []($2) {",
 			"  $3",
+			"});",
+			"if (pos != std::end(${1:container})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'partition'"
@@ -513,8 +513,8 @@
 		"partition_copy": {
 		"prefix": "ptc",
 		"body": [
-			"std::partition_copy(std::begin(${container}), std::end(${container}),",
-			"                  std::begin($1), std::end($2));"
+			"std::partition_copy(std::begin(${1:container}), std::end(${1:container}),",
+			"                  std::begin($2), std::end($3));"
 		],
 		"description": "Code snippet for 'partition_copy'"
 		},
@@ -522,11 +522,11 @@
 		"partition_point": {
 		"prefix": "ppt",
 		"body": [
-			"auto pos = std::partition_point(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
-			"});",
-			"if (pos != std::end(${container})) {",
+			"auto pos = std::partition_point(std::begin(${1:container}), std::end(${1:container}), []($2) {",
 			"  $3",
+			"});",
+			"if (pos != std::end(${1:container})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'partition_point'"
@@ -535,7 +535,7 @@
 		"partial_sort": {
 		"prefix": "pst",
 		"body": [
-			"std::partial_sort(std::begin(${container}), std::end(${container}), std::end(${container}));"
+			"std::partial_sort(std::begin(${1:container}), std::end(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'partial_sort'"
 		},
@@ -543,8 +543,8 @@
 		"partial_sort_copy": {
 		"prefix": "psc",
 		"body": [
-			"std::partial_sort_copy(std::begin(${container}), std::end(${container}),",
-			"                  std::begin($1), std::end($2));"
+			"std::partial_sort_copy(std::begin(${1:container}), std::end(${1:container}),",
+			"                  std::begin($2), std::end($3));"
 		],
 		"description": "Code snippet for 'partial_sort_copy'"
 		},
@@ -552,7 +552,7 @@
 		"pop_heap": {
 		"prefix": "pph",
 		"body": [
-			"std::pop_heap(std::begin(${container}), std::end(${container}));"
+			"std::pop_heap(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'pop_heap'"
 		},
@@ -560,8 +560,8 @@
 		"prev_permutation": {
 		"prefix": "prp",
 		"body": [
-			"if (std::prev_permutation(std::begin(${container}), std::end(${container}))) {",
-			"  $1",
+			"if (std::prev_permutation(std::begin(${1:container}), std::end(${1:container}))) {",
+			"  $2",
 			"}"
 		],
 		"description": "Code snippet for 'prev_permutation'"
@@ -570,7 +570,7 @@
 		"push_heap": {
 		"prefix": "phh",
 		"body": [
-			"std::push_heap(std::begin(${container}), std::end(${container}));"
+			"std::push_heap(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'push_heap'"
 		},
@@ -578,7 +578,7 @@
 		"random_shuffle": {
 		"prefix": "shf",
 		"body": [
-			"std::random_shuffle(std::begin(${container}), std::end(${container}));"
+			"std::random_shuffle(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'random_shuffle'"
 		},
@@ -586,9 +586,9 @@
 		"remove": {
 		"prefix": "rmv",
 		"body": [
-			"auto pos = std::remove(std::begin(${container}), std::end(${container}), $1);",
-			"if (pos != std::end(${container})) {",
-			"  $2",
+			"auto pos = std::remove(std::begin(${1:container}), std::end(${1:container}), $2);",
+			"if (pos != std::end(${1:container})) {",
+			"  $3",
 			"}"
 		],
 		"description": "Code snippet for 'remove'"
@@ -597,8 +597,8 @@
 		"remove_copy": {
 		"prefix": "rmc",
 		"body": [
-			"std::remove_copy(std::begin(${container}), std::end(${container}),",
-			"  std::begin(${container}), $1);"
+			"std::remove_copy(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin(${1:container}), $2);"
 		],
 		"description": "Code snippet for 'remove_copy'"
 		},
@@ -606,7 +606,7 @@
 		"replace": {
 		"prefix": "rpl",
 		"body": [
-			"std::replace(std::begin(${container}), std::end(${container}), $1, $2);"
+			"std::replace(std::begin(${1:container}), std::end(${1:container}), $2, $3);"
 		],
 		"description": "Code snippet for 'replace'"
 		},
@@ -614,9 +614,9 @@
 		"remove_copy_if": {
 		"prefix": "rmf",
 		"body": [
-			"std::remove_copy_if(std::begin(${container}), std::end(${container}),",
-			"  std::begin(${container}), []($1) {",
-			"    $2",
+			"std::remove_copy_if(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin(${1:container}), []($2) {",
+			"    $3",
 			"});"
 		],
 		"description": "Code snippet for 'remove_copy_if'"
@@ -625,11 +625,11 @@
 		"remove_if": {
 		"prefix": "rmi",
 		"body": [
-			"auto pos = std::remove_if(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
-			"});",
-			"if (pos != std::end(${container})) {",
+			"auto pos = std::remove_if(std::begin(${1:container}), std::end(${1:container}), []($2) {",
 			"  $3",
+			"});",
+			"if (pos != std::end(${1:container})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'remove_if'"
@@ -638,7 +638,7 @@
 		"replace_copy": {
 		"prefix": "rpc",
 		"body": [
-			"std::replace_copy(std::begin(${container}), std::end(${container}), std::begin(${container}), $1, $2);"
+			"std::replace_copy(std::begin(${1:container}), std::end(${1:container}), std::begin(${1:container}), $2, $3);"
 		],
 		"description": "Code snippet for 'replace_copy'"
 		},
@@ -646,10 +646,10 @@
 		"replace_copy_if": {
 		"prefix": "rci",
 		"body": [
-			"std::replace_copy_if(std::begin(${container}), std::end(${container}),",
-			"  std::begin(${container}), []($1) {",
-			"  $2",
-			"  }, $3);"
+			"std::replace_copy_if(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin(${1:container}), []($2) {",
+			"  $3",
+			"  }, $4);"
 		],
 		"description": "Code snippet for 'replace_copy_if'"
 		},
@@ -657,9 +657,9 @@
 		"replace_if": {
 		"prefix": "rpi",
 		"body": [
-			"std::replace_if(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2",
-			"}, $3);"
+			"std::replace_if(std::begin(${1:container}), std::end(${1:container}), []($2) {",
+			"  $3",
+			"}, $4);"
 		],
 		"description": "Code snippet for 'replace_if'"
 		},
@@ -667,7 +667,7 @@
 		"reverse": {
 		"prefix": "rvr",
 		"body": [
-			"std::reverse(std::begin(${container}), std::end(${container}));"
+			"std::reverse(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'reverse'"
 		},
@@ -675,7 +675,7 @@
 		"reverse_copy": {
 		"prefix": "rvc",
 		"body": [
-			"std::reverse_copy(std::begin(${container}), std::end(${container}), std::begin($1));"
+			"std::reverse_copy(std::begin(${1:container}), std::end(${1:container}), std::begin($2));"
 		],
 		"description": "Code snippet for 'reverse_copy'"
 		},
@@ -683,7 +683,7 @@
 		"rotate": {
 		"prefix": "rte",
 		"body": [
-			"std::rotate(std::begin(${container}), std::begin($1), std::end(${container}));"
+			"std::rotate(std::begin(${1:container}), std::begin($2), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'rotate'"
 		},
@@ -691,8 +691,8 @@
 		"rotate_copy": {
 		"prefix": "rtc",
 		"body": [
-			"std::rotate_copy(std::begin(${container}), std::begin($1), std::end(${container}),",
-			"  std::begin($2));"
+			"std::rotate_copy(std::begin(${1:container}), std::begin($2), std::end(${1:container}),",
+			"  std::begin($3));"
 		],
 		"description": "Code snippet for 'rotate_copy'"
 		},
@@ -700,10 +700,10 @@
 		"search": {
 		"prefix": "srh",
 		"body": [
-			"auto pos = std::search(std::begin(${container}), std::end(${container}),",
-			"  std::begin($1), std::end($2));",
-			"if (pos != std::end(${container})) {",
-			"  $3",
+			"auto pos = std::search(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin($2), std::end($3));",
+			"if (pos != std::end(${1:container})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'search'"
@@ -712,9 +712,9 @@
 		"search_n": {
 		"prefix": "srn",
 		"body": [
-			"auto pos = std::search_n(std::begin(${container}), std::end(${container}),$1,$2);",
-			"if (pos != std::end(${container})) {",
-			"  $3",
+			"auto pos = std::search_n(std::begin(${1:container}), std::end(${1:container}),$2,$3);",
+			"if (pos != std::end(${1:container})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'search_n'"
@@ -723,8 +723,8 @@
 		"set_intersection": {
 		"prefix": "stn",
 		"body": [
-			"auto pos = std::set_intersection(std::begin(${container}), std::end(${container}),",
-			"  std::begin($1), std::end($2), std::begin($3));"
+			"auto pos = std::set_intersection(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin($2), std::end($3), std::begin($4));"
 		],
 		"description": "Code snippet for 'set_intersection'"
 		},
@@ -732,8 +732,8 @@
 		"set_difference": {
 		"prefix": "std",
 		"body": [
-			"auto pos = std::set_difference(std::begin(${container}), std::end(${container}),",
-			"  std::begin($1), std::end($2), std::begin($3));"
+			"auto pos = std::set_difference(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin($2), std::end($3), std::begin($4));"
 		],
 		"description": "Code snippet for 'set_difference'"
 		},
@@ -741,8 +741,8 @@
 		"set_symmetric_difference": {
 		"prefix": "ssd",
 		"body": [
-			"auto pos = std::set_symmetric_difference(std::begin(${container}),",
-			"  std::end(${container}), std::begin($1), std::end($2), std::begin($3));"
+			"auto pos = std::set_symmetric_difference(std::begin(${1:container}),",
+			"  std::end(${1:container}), std::begin($2), std::end($3), std::begin($4));"
 		],
 		"description": "Code snippet for 'set_symmetric_difference'"
 		},
@@ -750,8 +750,8 @@
 		"set_union": {
 		"prefix": "stu",
 		"body": [
-			"auto pos = std::set_union(std::begin(${container}), std::end(${container}),",
-			"  std::begin($1), std::end($2), std::begin($3));"
+			"auto pos = std::set_union(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin($2), std::end($3), std::begin($4));"
 		],
 		"description": "Code snippet for 'set_union'"
 		},
@@ -759,7 +759,7 @@
 		"sort": {
 		"prefix": "srt",
 		"body": [
-			"std::sort(std::begin(${container}), std::end(${container}));"
+			"std::sort(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'sort'"
 		},
@@ -767,7 +767,7 @@
 		"sort_heap": {
 		"prefix": "sth",
 		"body": [
-			"std::sort_heap(std::begin(${container}), std::end(${container}));"
+			"std::sort_heap(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'sort_heap'"
 		},
@@ -775,10 +775,10 @@
 		"stable_partition": {
 		"prefix": "spt",
 		"body": [
-			"auto pos = std::stable_partition(std::begin(${container}), std::end(${container}), []($1) {",
-			"  $2});",
-			"if (pos != std::end(${container})) {",
-			"  $3",
+			"auto pos = std::stable_partition(std::begin(${1:container}), std::end(${1:container}), []($2) {",
+			"  $3});",
+			"if (pos != std::end(${1:container})) {",
+			"  $4",
 			"}"
 		],
 		"description": "Code snippet for 'stable_partition'"
@@ -787,7 +787,7 @@
 		"stable_sort": {
 		"prefix": "sts",
 		"body": [
-			"std::stable_sort(std::begin(${container}), std::end(${container}));"
+			"std::stable_sort(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'stable_sort'"
 		},
@@ -795,7 +795,7 @@
 		"string_lower": {
 		"prefix": "lwr",
 		"body": [
-			"std::transform(std::begin(${container}), std::end(${container}), std::begin(${container}), [](char c) {",
+			"std::transform(std::begin(${1:container}), std::end(${1:container}), std::begin(${1:container}), [](char c) {",
 			"return std::tolower(c); });"
 		],
 		"description": "Code snippet for 'string_lower'"
@@ -804,10 +804,10 @@
 		"string_upper": {
 		"prefix": "upr",
 		"body": [
-			"std::transform(std::begin(${container}), std::end(${container}), std::begin(${container}), [](char c) {",
+			"std::transform(std::begin(${1:container}), std::end(${1:container}), std::begin(${1:container}), [](char c) {",
 			"return std::toupper(c);",
 			"});",
-			"$1"
+			"$2"
 		],
 		"description": "Code snippet for 'string_upper'"
 		},
@@ -815,7 +815,7 @@
 		"string_trim_left": {
 		"prefix": "ltr",
 		"body": [
-			"${container}.erase(0, ${container}.find_first_not_of(\" \\t\\n\\r\"));"
+			"${1:container}.erase(0, ${1:container}.find_first_not_of(\" \\t\\n\\r\"));"
 		],
 		"description": "Code snippet for 'string_trim_left'"
 		},
@@ -823,7 +823,7 @@
 		"string_trim_right": {
 		"prefix": "trm",
 		"body": [
-			"${container}.erase(${container}.find_last_not_of(\" \\t\\n\\r\") + 1);"
+			"${1:container}.erase(${1:container}.find_last_not_of(\" \\t\\n\\r\") + 1);"
 		],
 		"description": "Code snippet for 'string_trim_right'"
 		},
@@ -831,7 +831,7 @@
 		"swap": {
 		"prefix": "swp",
 		"body": [
-			"std::swap(${container}, $1);"
+			"std::swap(${1:container}, $2);"
 		],
 		"description": "Code snippet for 'swap'"
 		},
@@ -839,7 +839,7 @@
 		"swap_ranges": {
 		"prefix": "swr",
 		"body": [
-			"std::swap_ranges(std::begin(${container}), std::end(${container}), std::begin($1));"
+			"std::swap_ranges(std::begin(${1:container}), std::end(${1:container}), std::begin($2));"
 		],
 		"description": "Code snippet for 'swap_ranges'"
 		},
@@ -847,9 +847,9 @@
 		"transform": {
 		"prefix": "tfm",
 		"body": [
-			"std::transform(std::begin(${container}), std::end(${container}),",
-			"  std::begin(${container}), []($1) {",
-			"$2",
+			"std::transform(std::begin(${1:container}), std::end(${1:container}),",
+			"  std::begin(${1:container}), []($2) {",
+			"$3",
 			"});"
 		],
 		"description": "Code snippet for 'transform'"
@@ -858,7 +858,7 @@
 		"unique": {
 		"prefix": "uqe",
 		"body": [
-			"auto pos = std::unique(std::begin(${container}), std::end(${container}));"
+			"auto pos = std::unique(std::begin(${1:container}), std::end(${1:container}));"
 		],
 		"description": "Code snippet for 'unique'"
 		},
@@ -866,7 +866,7 @@
 		"unique_copy": {
 		"prefix": "ucp",
 		"body": [
-			"std::unique_copy(std::begin(${container}), std::end(${container}),",
+			"std::unique_copy(std::begin(${1:container}), std::end(${1:container}),",
 			"  std::ostream_iterator<string>(std::cout, \"\\n\"));"
 		],
 		"description": "Code snippet for 'unique_copy'"
@@ -875,9 +875,9 @@
 		"upper_bound": {
 		"prefix": "upb",
 		"body": [
-			"auto pos = std::upper_bound(std::begin(${container}), std::end(${container}), $1);",
-			"if (pos != std::end(${container})) {",
-			"  $2",
+			"auto pos = std::upper_bound(std::begin(${1:container}), std::end(${1:container}), $2);",
+			"if (pos != std::end(${1:container})) {",
+			"  $3",
 			"}"
 		],
 		"description": "Code snippet for 'upper_bound'"
@@ -886,7 +886,7 @@
 		"vector": {
 		"prefix": "stv",
 		"body": [
-			"std::vector<$1> $2"
+			"std::vector<$2> $3"
 		],
 		"description": "Code snippet for 'vector'"
 		}
