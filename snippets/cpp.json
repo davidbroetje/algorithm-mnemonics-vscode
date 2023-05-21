@@ -375,15 +375,15 @@
 		"description": "Code snippet for 'is_sorted_until'"
 		},
 
-		"lexigraphical_compare": {
+		"lexicographical_compare": {
 		"prefix": "lxc",
 		"body": [
-			"if (std::lexigraphical_compare(std::begin(${1:container}), std::end(${1:container}),",
+			"if (std::lexicographical_compare(std::begin(${1:container}), std::end(${1:container}),",
 			"  std::begin($2), std::end($3)) {",
 			"  $4",
 			"}"
 		],
-		"description": "Code snippet for 'lexigraphical_compare'"
+		"description": "Code snippet for 'lexicographical_compare'"
 		},
 
 		"lower_bound": {
